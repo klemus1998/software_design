@@ -19,6 +19,7 @@ body {
 }
 .sign-in-form hl {
 	font-size: 40px;
+	font-weight: bold;
 	padding-left: 45px;
 	text-align: center;
 	text-transform: uppercase;

@@ -15,14 +15,16 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 350px;
+	width: 400px;
 }
 .registration-form hl {
-	font-size: 40px;
-	padding-left: 45px;
+	font-size: 30px;
+	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
-	margin: 40px 0;
+	margin-top: 40px;
+	margin-left: 40px;
+	display: inline-block;
 }
 
 .registration-form h2 {
