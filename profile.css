@@ -6,7 +6,7 @@
 }
 
 body{
-	background: black;
+	background: url('./bg.jpg') no-repeat;
 	background-size: cover;
 	color: #fff;
 }
@@ -16,19 +16,21 @@ top:50%;
 left: 50%;
 transform: translate(-50%, -50%);
 width: 400px;
-
+height: 100%;
 }
 
 .profile-manager h1{
 	font-size: 30px;
-	text-align: center;
+	text-align: right;
 	text-transform: uppercase;
-	margin: 40px 0;
+	margin-top: 40px;
+	margin-left: 50px;
+	display: inline-block;
 }
 
 .profile-manager p{
 	font-size: 20px;
-	margin 15px 0;
+	margin: 15px 0;
 }
 
 .profile-manager input{
