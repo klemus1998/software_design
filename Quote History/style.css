@@ -1,0 +1,74 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	margin-bottom: 20px;
+}
+
+body {
+	background: url('./bg.jpg') no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+
+.fuel-quote-history {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 350px;
+}
+.fuel-quote-history hl {
+	font-size: 40px;
+	padding-left: 45px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 40px;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.fuel-quote-history h2 {
+	font-size: 40px;
+	padding-left: 45px;
+	text-align: center;
+	text-transform: uppercase;
+	
+}
+
+.fuel-quote-history p {
+	font-size: 20px;
+	margin: 15px 0;
+}
+
+.fuel-quote-history input {
+	font-size: 16px;
+	padding: 15 px 10px;
+	width: 100%;
+	border: 0;
+	border-radius: 5px;
+	outline: none;
+}
+
+table, th, td {
+	border: 1px solid white;
+  }
+th, td {
+	text-align: left;  
+	  
+  }
+
+.fuel-quote-history button {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 20px 0;
+	padding: 10px 15px;
+	width: 50%;
+	border: 0;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+.fuel-quote-history button:hover {
+	color: red;
+}
