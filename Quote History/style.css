@@ -2,7 +2,6 @@
 	padding: 0;
 	margin: 0;
 	font-family: sans-serif;
-	margin-bottom: 20px;
 }
 
 body {
@@ -11,20 +10,13 @@ body {
 	color: #fff;
 }
 
-.fuel-quote-history {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 350px;
-}
 .fuel-quote-history hl {
 	font-size: 40px;
 	padding-left: 45px;
 	text-align: center;
 	text-transform: uppercase;
 	margin-top: 40px;
-	margin-left: 10px;
+	margin-left: 500px;
 	display: inline-block;
 }
 
@@ -52,10 +44,11 @@ body {
 
 table, th, td {
 	border: 1px solid white;
+	font-size: large;
   }
 th, td {
-	text-align: left;  
-	  
+	text-align: left; 
+
   }
 
 .fuel-quote-history button {

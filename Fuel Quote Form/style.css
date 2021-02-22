@@ -2,6 +2,7 @@
 	padding: 0;
 	margin: 0;
 	font-family: sans-serif;
+	margin-bottom: 20px;
 }
 
 body {
@@ -17,12 +18,15 @@ body {
 	transform: translate(-50%, -50%);
 	width: 350px;
 }
+
 .fuel-quote-form hl {
-	font-size: 40px;
-	padding-left: 45px;
-	text-align: center;
+	font-size: 30px;
+	text-align: right;
+	font-weight: bold;
 	text-transform: uppercase;
-	margin: 40px 0;
+	margin-top: 40px;
+	margin-left: 50px;
+	display: inline-block;
 }
 
 .fuel-quote-form h2 {
