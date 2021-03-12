@@ -39,7 +39,8 @@ body {
 	outline: none;
 }
 
-.sign-in-form button {
+.sign-in-form input[type="Submit"]
+{
 	font-size: 18px;
 	font-weight: bold;
 	margin: 20px 0;
@@ -50,6 +51,6 @@ body {
 	background-color: #fff;
 }
 
-.sign-in-form button:hover {
-	color: red;
+.sign-in-form input[type="Submit"]:hover {
+	color: green;
 }
