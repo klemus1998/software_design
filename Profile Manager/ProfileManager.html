@@ -3,6 +3,7 @@
 <head>
 	<title>Complete Profile</title>
 	<link rel="stylesheet" type="text/css" href="./profile.css">
+	<script type="text/javascript" src="profile.js"></script>
 </head>	
 <body>
 	<div class="profile-manager">
@@ -11,7 +12,7 @@
 				<p>Full Name:</p>
 				<input type="text" name="fullname" placeholder="Full Name" maxlength="50" required>
 				<p>Address 1:</p>
-				<input type="text" name="address1" placeholder="Address 1" maxlength="100" required>
+				<input type="text" id="address" name="address1" placeholder="Address 1" maxlength="100" required>
 				<p>Address 2:</p>
 				<input type="text" name="address2" placeholder="Address 2" maxlength="100">
 				<p>City:</p>
@@ -73,7 +74,7 @@
 				<p>Zipcode</p>
 				<input type="text" pattern="[0-9]*" name="zipcode" placeholder="Zipcode" minlength="5" maxlength="9" required>
 				<br></br>
-				<button type="submit">Submit</button>
+				<button type="submit" onclick="handleSubmit()">Submit</button>
 			</form>
 		</div>
 	</body>

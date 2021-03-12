@@ -3,24 +3,24 @@
 <head>
 	<title>Fuel Quote Form</title>
 	<link rel="stylesheet" type="text/css" href= "./style.css">
+	<script type = "text/javascript" src="fuel_quote.js" ></script>
 </head>
 <body>
 	<div class ="fuel-quote-form">
 		<hl>Fuel Quote Form</hl>
-		<form action="../Quote History/fuel_history.html" method="post">
+		<form action="../Quote History/fuel_history.html" method="POST">
 			<p>Gallons Requested: </p>
 			<input type="number" step = "0.01" id = "gallons" name="gallons" placeholder = "Gallons" required>
             <p>Delivery date: </p>
 			<input type = "date" id = "deliverydate" name="gallons" placeholder = "DeliveryDate">
 			<p>Delivery Address</p>
-			<input type= "text" id = "d_address" name = "d_address" value = "4800 Calhoun Rd, Houston, TX 77004, United States"
-			readonly>
+			<input type= "text" id = "d_address" name = "d_address" readonly>
             <p>Suggested Price/gallon</p>
 			<input type = "number" id = "price/gallon" name ="price/gallon" value="2.4"
 			readonly>
 			<p>Total Amount Due</p>
 			<input type = "number" id = "result" name = "result" placeholder = "6" readonly>
-			<button type="Submit">Submit</button>
+			<button type="Submit"onclick = handleSubmitHistory() >Submit</button>
 		</form>
 	</div>
 </body>
