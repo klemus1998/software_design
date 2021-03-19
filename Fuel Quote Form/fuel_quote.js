@@ -2,7 +2,10 @@ function handleSubmitHistory() {
     var gallons = document.getElementById("gallons_id").value;
     var deliverydate = document.getElementById('test').value;
 
-    localStorage.setItem('gallons_id', gallons);
+    if (typeof Number(gallons) == 'number') {
+        localStorage.setItem('gallons_id', gallons);
+    }
+    
     localStorage.setItem("test", deliverydate);
     localStorage.setItem("PRICE/GALLON", pricing_module());
     localStorage.setItem("total", calc_result());
