@@ -3,11 +3,12 @@
 <head>
 	<title>Fuel Quote History</title>
 	<link rel="stylesheet" type="text/css" href= "./style.css">
+  <script type="text/javascript" src="history.js"></script>
 </head>
 <body>
 	<div class ="fuel-quote-history">
 		<hl>Fuel Quote History</hl>
-		<table class="center" style="width:100%">
+		<table id = "fuel_history" class="center" style="width:100%">
   <tr>
     <th>Gallons Requested</th>
     <th>Delivery Date</th>
@@ -16,16 +17,16 @@
     <th>Total Amount Due</th>
   </tr>
   <tr>
-    <td>60</td>
-    <td>02/21/2021</td>
-    <td>4800 Calhoun Rd, Houston, TX 77004, United States</td>
-    <td>2.4</td>
-    <td>6</td>
+    <td id = "gallons_id"></td>
+    <td id = "test"></td>
+    <td id = "d_address"></td>
+    <td id = "price_p_gallon"></td>
+    <td id = "total_due"></td>
   </tr>
   <tr>
     <td>8</td>
     <td>02/23/2021</td>
-    <td>4800 Calhoun Rd, Houston, TX 77004, United States</td>
+    <td id = "d_address1"></td>
     <td>2.4</td>
     <td>6</td>
   </tr>

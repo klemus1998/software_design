@@ -1,18 +1,27 @@
-window.addEventListener('load', () =>
-{
-    d_address.value=localStorage.getItem('ADDRESS');
-})
-
 function handleSubmitHistory() {
-    const gallons = document.getElementById('gallons').value;
-    const deliverydate = document.getElementById('deliverydate').value;
-    const price_gallon = document.getElementById('price/gallon').value;
-    const result = document.getElementById('result').value;
+    var gallons = document.getElementById("gallons_id").value;
+    var deliverydate = document.getElementById('test').value;
 
-    localStorage.setItem("GALLONS", gallons);
-    localStorage.setItem("DELIVERYDATE", deliverydate);
-    localStorage.setItem("PRICE/GALLON", price_gallon);
-    localStorage.setItem("RESULT", result);
+    localStorage.setItem('gallons_id', gallons);
+    localStorage.setItem("test", deliverydate);
+    localStorage.setItem("PRICE/GALLON", pricing_module());
+    localStorage.setItem("total", calc_result());
 
     return;
+}
+
+window.addEventListener('load', () =>
+{
+    d_address.value = localStorage.getItem('ADDRESS');
+
+    document.getElementById("d_address").innerHTML = d_address.value;
+})
+
+function pricing_module() {
+    return 2.4;
+}
+
+function calc_result() {
+    total = 50 * pricing_module();
+    return total.toFixed(2);
 }
