@@ -8,13 +8,13 @@ function handleSubmit() {
     return;
 }
 
-var adddie
+var adddie;
 
 function Ready() {
     addie = getElementById('address').value;
 }
 
-document.getElementById('submitBtn').onclick = function(){
+function testingSub() {
     Ready();
     firebase.database().ref('test/').set({
         AddressOfClient: addie

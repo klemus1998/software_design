@@ -3,6 +3,7 @@
 <head>
 	<title>Complete Profile</title>
 	<link rel="stylesheet" type="text/css" href="./profile.css">
+	<script type="text/javascript" src="profile.js"></script>
 </head>	
 <body>
 	<div class="profile-manager">
@@ -73,12 +74,11 @@
 				<p>Zipcode</p>
 				<input type="text" pattern="[0-9]*" name="zipcode" placeholder="Zipcode" minlength="5" maxlength="9" required>
 				<br></br>
-				<button type="submit" id = "submitBtn">Submit</button>
+				<button type="submit" onclick="testingSub()" id = "submitBtn">Submit</button>
 			</form>
 		</div>
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
 		<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
 
 		<!-- TODO: Add SDKs for Firebase products that you want to use
 			https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -101,8 +101,6 @@
 		firebase.initializeApp(firebaseConfig);
 		firebase.analytics();
 		</script>
-
-		<script type="text/javascript" src="profile.js"></script>
 
 	</body>
 </html>
