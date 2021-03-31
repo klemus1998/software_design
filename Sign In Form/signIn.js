@@ -1,9 +1,9 @@
 function validate()
 {
-    var username = document.getElementById("username").value;
+    var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    if(username == "admin" && password == "pass")
+    if(email == "admin@gmail.com" && password == "pass")
     {
         alert("login successful");
         true;
