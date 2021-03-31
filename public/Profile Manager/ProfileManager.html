@@ -11,7 +11,7 @@
 				<p>Full Name:</p>
 				<input type="text" name="fullname" placeholder="Full Name" maxlength="50" required>
 				<p>Address 1:</p>
-				<input type="text" name="address1" placeholder="Address 1" maxlength="100" required>
+				<input type="text" id="address" name="address1" placeholder="Address 1" maxlength="100" required>
 				<p>Address 2:</p>
 				<input type="text" name="address2" placeholder="Address 2" maxlength="100">
 				<p>City:</p>
@@ -73,8 +73,36 @@
 				<p>Zipcode</p>
 				<input type="text" pattern="[0-9]*" name="zipcode" placeholder="Zipcode" minlength="5" maxlength="9" required>
 				<br></br>
-				<button type="submit">Submit</button>
+				<button type="submit" id = "submitBtn">Submit</button>
 			</form>
 		</div>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+			https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+		<script>
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		var firebaseConfig = {
+			apiKey: "AIzaSyALuDn_Og_wckAe6JclRKlDzzk2Rim-4Pw",
+			authDomain: "software-design-8ea1b.firebaseapp.com",
+			databaseURL: "https://software-design-8ea1b-default-rtdb.firebaseio.com",
+			projectId: "software-design-8ea1b",
+			storageBucket: "software-design-8ea1b.appspot.com",
+			messagingSenderId: "357419323251",
+			appId: "1:357419323251:web:707639ce6ca1dc738aff06",
+			measurementId: "G-MWFFLG1JZE"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+		</script>
+
+		<script type="text/javascript" src="profile.js"></script>
+
 	</body>
 </html>
