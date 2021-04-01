@@ -18,11 +18,16 @@ function register()
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    const promise = auth.createUserWithEmailAndPassword(email, password);
-    promise.catch(e => alert(e.message));
+    auth.createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+        // Registered
+        var user = userCredential.user;
+        // ...
+        window.location.href = "../Profile Manager/ProfileManager.html";
+    })
+    .catch(e => alert(e.message));
     console.log("Hello");
     alert("Registered");
-    window.location.href = "../Profile Manager/ProfileManager.html";
 }
 
 function signIn()
