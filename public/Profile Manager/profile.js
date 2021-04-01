@@ -11,7 +11,7 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-var nameRef = firebase.database().ref('names');
+var userRef = firebase.database().ref('users');
 
 document.getElementById('profileSubmit').addEventListener('submit', submitForm);
 
@@ -20,16 +20,24 @@ function submitForm(e) {
 
     var name = document.getElementById('thisname').value;
     var addie = document.getElementById('address').value;
+    var addie2 = document.getElementById('address2').value;
+    var city = document.getElementById('city').value;
+    var state = document.getElementById('state').value;
+    var zip = document.getElementById('zip').value;
 
-    saveNames(name, addie);
+    saveData(name, addie, addie2, city, state, zip);
 
     window.location.href = "../Fuel_Quote_Form/fuel_quote.html";
 }
 
 
-function saveNames(name, addie) {
-    nameRef.set({
+function saveData(name, addie, addie2, city, state, zip) {
+    userRef.set({
         name: name,
-        addie: addie
+        addie: addie,
+        addie2: addie2,
+        city: city,
+        state: state,
+        zipcode: zip
     });
 }
