@@ -2,45 +2,58 @@
 <html>
 <head>
 	<title>Registration Form</title>
+  <script type = "text/javascript" src="../Sign In Form/signIn.js"></script>
 	<link rel="stylesheet" type="text/css" href= "./style.css">
 </head>
 <body>
 	<div class ="registration-form">
 		<hl> Registration Form</hl>
 		
-		<form action="../Profile Manager/ProfileManager.html" method="post">
-			<p>Username: </p>
-			<input type="text" name = "username" placeholder = "Username">
+
+			<p>Email: </p>
+			<input type="email" id = "email" name = "email" placeholder = "Email">
 			<p>Password: </p>
-			<input type="password" name="password" placeholder="Password">
-			<button type="Submit">Register</button>
+			<input type="password" id = "password" name="password" placeholder="Password">
+			<button onclick="register()" id="register"> Register</button>
 			<p> If you already have an account: </p>
 			<a href="../Sign In Form/signIn.html">Sign In</a>
-		</form>
+
 	</div>
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+<script>var firebaseConfig = {
+  apiKey: "AIzaSyALuDn_Og_wckAe6JclRKlDzzk2Rim-4Pw",
+  authDomain: "software-design-8ea1b.firebaseapp.com",
+  databaseURL: "https://software-design-8ea1b-default-rtdb.firebaseio.com",
+  projectId: "software-design-8ea1b",
+  storageBucket: "software-design-8ea1b.appspot.com",
+  messagingSenderId: "357419323251",
+  appId: "1:357419323251:web:707639ce6ca1dc738aff06",
+  measurementId: "G-MWFFLG1JZE"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+const auth = firebase.auth();
 
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyALuDn_Og_wckAe6JclRKlDzzk2Rim-4Pw",
-    authDomain: "software-design-8ea1b.firebaseapp.com",
-    databaseURL: "https://software-design-8ea1b-default-rtdb.firebaseio.com",
-    projectId: "software-design-8ea1b",
-    storageBucket: "software-design-8ea1b.appspot.com",
-    messagingSenderId: "357419323251",
-    appId: "1:357419323251:web:707639ce6ca1dc738aff06",
-    measurementId: "G-MWFFLG1JZE"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+auth.onAuthStateChanged(function(user)
+{
+    if(user)
+    {
+        var email = user.email;
+        alert("Active user " + email);
+
+        //is signed in
+    }
+    else{
+        alert("No Active User");
+    }
+})
 </script>
 </body>
 </html>

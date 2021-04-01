@@ -39,7 +39,7 @@ body {
 	outline: none;
 }
 
-.sign-in-form input[type="Submit"]
+.sign-in-form button[id="signIn"]
 {
 	font-size: 18px;
 	font-weight: bold;
