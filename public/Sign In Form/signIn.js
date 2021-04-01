@@ -12,27 +12,20 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
   const auth = firebase.auth();
-  
-  auth.onAuthStateChanged(function(user)
-  {
-      if(user)
-      {
-          var email = user.email;
-          alert("Active user " + email);
-  
-          //is signed in
-      }
-      else{
-          alert("No Active User");
-      }
-  })
+
 function register()
 {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    const promise = auth.createUserWithEmailAndPassword(email, password);
-    promise.catch(e => alert(e.message));
+    auth.createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+        // Registered
+        var user = userCredential.user;
+        // ...
+        window.location.href = "../Profile Manager/ProfileManager.html";
+    })
+    .catch(e => alert(e.message));
     console.log("Hello");
     alert("Registered");
 }
@@ -42,8 +35,17 @@ function signIn()
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    const promise = auth.signInWithEmailAndPassword(email.value, password.value);
-    promise.catch(e => alert(e.message));
+    auth.signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        // ...
+        window.location.href = "../Fuel_Quote_Form/fuel_quote.html";
+      })
+    .catch(e => alert(e.message)); 
+    //promise.catch(e => alert(e.message));
 
     alert("Signed In " + email);
+    
+    
 }
