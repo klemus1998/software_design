@@ -11,6 +11,7 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
+  
 var userRef = firebase.database().ref('users');
 
 document.getElementById('profileSubmit').addEventListener('submit', submitForm);
@@ -32,7 +33,7 @@ function submitForm(e) {
 
 
 function saveData(name, addie, addie2, city, state, zip) {
-    userRef.set({
+    userRef.push().set({
         name: name,
         addie: addie,
         addie2: addie2,

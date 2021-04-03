@@ -14,25 +14,55 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-var userRef = firebase.database().ref("users/fuelquote");
+var addy = document.getElementById('d_address');
+
+var ref=firebase.database().ref('users');
+ref.on('value',gotData);
+
+function gotData(data)
+{
+    var users = data.val();
+    var keys = Object.keys(users);
+    for(var i=0; i<keys.length; i++)
+    {
+        var k = keys[i];
+        var address = users[k].addie;
+    }
+   
+    addy.innerText=address;
+}
+
+
 
 document.getElementById('fuelquote').addEventListener('submit', submitForm);
 
 function submitForm(e) {
     e.preventDefault();
 
-    var gallons = document.getElementById('gallons_id').value;
-    var date = document.getElementById('date').value;
+    ref.on('value',saveData);
 
-    saveData(gallons, date);
-
-    window.location.href = "../Quote History/fuel_history.html";
+   window.location.href = "../Quote History/fuel_history.html";
 }
 
-function saveData(gallons, date) {
-    userRef.push().update({
+function saveData(data) {
+    var users = data.val();
+    var keys = Object.keys(users);
+    for(var i=0; i<keys.length; i++)
+    {
+        var k = keys[i];
+    }
+
+    var gallons = document.getElementById('gallons_id').value;
+    var date = document.getElementById('date').value;
+    var ppg = document.getElementById('ppg').value;
+    var total = document.getElementById('total').value;
+    console.log(ppg,total);
+    var newRef=firebase.database().ref('users/'+k+'/fuelquote');
+    newRef.update({
         gallons_requested: gallons,
-        delivery_date: date
+        delivery_date: date,
+        price_per_gallon: ppg,
+        total: total
     });
 }
 

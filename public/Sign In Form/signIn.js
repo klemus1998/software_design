@@ -43,8 +43,8 @@ function signIn()
         window.location.href = "../Fuel_Quote_Form/fuel_quote.html";
       })
     .catch(e => alert(e.message)); 
-    //promise.catch(e => alert(e.message));
 
+    //promise.catch(e => alert(e.message));
     alert("Signed In " + email);
     
     

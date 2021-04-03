@@ -3,7 +3,6 @@
 <head>
 	<title>Fuel Quote History</title>
 	<link rel="stylesheet" type="text/css" href= "./style.css">
-  <script type="text/javascript" src="history.js"></script>
 </head>
 <body>
 	<div class ="fuel-quote-history">
@@ -17,45 +16,21 @@
     <th>Total Amount Due</th>
   </tr>
   <tr>
-    <td id = "gallons_id"></td>
-    <td id = "test"></td>
+    <td id = "gallons"></td>
+    <td id = "date"></td>
     <td id = "d_address"></td>
-    <td id = "price_p_gallon"></td>
-    <td id = "total_due"></td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>02/23/2021</td>
-    <td id = "d_address1"></td>
-    <td>2.4</td>
-    <td>6</td>
+    <td id = "ppg"></td>
+    <td id = "total"></td>
   </tr>
 </table>
 	</div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyALuDn_Og_wckAe6JclRKlDzzk2Rim-4Pw",
-    authDomain: "software-design-8ea1b.firebaseapp.com",
-    databaseURL: "https://software-design-8ea1b-default-rtdb.firebaseio.com",
-    projectId: "software-design-8ea1b",
-    storageBucket: "software-design-8ea1b.appspot.com",
-    messagingSenderId: "357419323251",
-    appId: "1:357419323251:web:707639ce6ca1dc738aff06",
-    measurementId: "G-MWFFLG1JZE"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
 
 <script type="text/javascript" src="history.js"></script>
 
