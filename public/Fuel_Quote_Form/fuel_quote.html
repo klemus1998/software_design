@@ -11,14 +11,15 @@
 			<p>Gallons Requested: </p>
 			<input type="number" step = "0.01" id = "gallons_id" name="gallons" placeholder = "gallons" required>
             <p>Delivery date: </p>
-			<input type = "date" id = "date" name="date" placeholder = "date">
+			<input type = "date" id = "date" name="date" placeholder = "date" required>
 			<p>Delivery Address: </p>
 			<ol id = "d_address" name = "d_address"></ol>
             <p>Suggested Price/gallon</p>
-			<input type=text id = "ppg" value=2.4 readonly>
+			<input type=text id = "ppg" readonly>
 			<p>Total Amount Due</p>
-			<input type=text id = "total" value=90 readonly>
-			<button type="submit" id="submit">Submit</button>
+			<input type=text id = "total" readonly>
+			<input type = "button" id = "get_quote" value = "Get Quote">
+			<button type= "submit" id="submit">Submit</button>
 		</form>
 	</div>
 	<!-- The core Firebase JS SDK is always required and must be listed first -->

@@ -27,6 +27,7 @@ function gotData(data)
     {
         var k = keys[i];
         var address = users[k].addie;
+
     }
    
     addy.innerText=address;
@@ -72,11 +73,51 @@ window.addEventListener('load', () =>
     
 })
 
+const button = document.getElementById("get_quote");
+button.addEventListener('click', pricing_module);
 function pricing_module() {
-    return 2.4;
+    ref.on('value',calc_result);
+    
+    
 }
 
-function calc_result() {
-    total = 50 * pricing_module();
-    return total.toFixed(2);
+function calc_result(data) {
+    var users = data.val();
+    var keys = Object.keys(users);
+
+    for(var i=0; i<keys.length; i++)
+    {
+        var k = keys[i];
+        
+    }
+
+    var state = users[k].state;
+    var location = 0.04;
+    var gallons = document.getElementById('gallons_id').value;
+
+    if(gallons > 0)
+    {
+        if(state == "TX")
+        {
+            location = 0.02;
+        }
+
+        var gallonsRequestedFactor = 0.03;
+
+        if(gallons > 1000)
+        {
+            gallonsRequestedFactor = 0.02;
+        }
+
+        var companyProfitFactor = 0.1;
+        var margin = location + gallonsRequestedFactor + companyProfitFactor;
+        var suggestedPrice = parseFloat(1.5 + margin).toFixed(2);
+        var total = parseFloat(gallons * suggestedPrice).toFixed(2);
+        
+
+        document.getElementById('ppg').value = suggestedPrice;
+        document.getElementById('total').value = total;
+    }
+
+    
 }
